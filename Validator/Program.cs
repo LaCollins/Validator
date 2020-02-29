@@ -121,6 +121,23 @@ namespace Validator
                     break;
             }
 
+            //Palendrome Checker
+            Console.WriteLine("Please enter a word...");
+            var wordToCheck = Console.ReadLine();
+            char[] wordArray = wordToCheck.ToCharArray();
+            Array.Reverse(wordArray);
+            var reversed = new String(wordArray);
+            var isPalendrome = wordToCheck.Equals(reversed, StringComparison.OrdinalIgnoreCase);
+            if (isPalendrome == true)
+            {
+                Console.WriteLine($"{wordToCheck} is a Palendrome!");
+            }
+            else
+            {
+                Console.WriteLine($"{wordToCheck} is not a Palendrome.");
+            }
+            
+
             Console.ReadKey();
         }
 
